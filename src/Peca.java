@@ -1,4 +1,5 @@
-abstract class Peca {
+
+public abstract class Peca {
     private String descricao;
     private int quantidade;
     private int estoqueMinimo;
@@ -13,11 +14,15 @@ abstract class Peca {
 
     public abstract void venda();
 
+    public abstract void reposicao();
+    
     public void reposicaoEstoque() {
         if (quantidade < estoqueMinimo) {
             quantidade = estoqueMaximo;
         }
     }
+
+    // Métodos getters e setters
 
     public String getDescricao() {
         return descricao;

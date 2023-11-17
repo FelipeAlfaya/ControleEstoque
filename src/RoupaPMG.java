@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class RoupaPMG extends Peca {
+class RoupaPMG extends Peca {
     private int quantidadeP;
     private int quantidadeM;
     private int quantidadeG;
@@ -33,6 +33,28 @@ public class RoupaPMG extends Peca {
                 System.out.println("Tamanho inválido.");
         }
     }
+
+    @Override
+    public void reposicao() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Informe o tamanho do item (P, M ou G): ");
+        char tamanho = scanner.next().charAt(0);
+
+        switch (tamanho) {
+            case 'P':
+                quantidadeP++;
+                break;
+            case 'M':
+                quantidadeM++;
+                break;
+            case 'G':
+                quantidadeG++;
+                break;
+            default:
+                System.out.println("Tamanho inválido.");
+        }
+    }
+
 
     @Override
     public void reposicaoEstoque() {

@@ -12,4 +12,12 @@ public class Acessorio extends Peca {
         int quantidadeVendida = scanner.nextInt();
         setQuantidade(getQuantidade() - quantidadeVendida);
     }
+
+    @Override
+    public void reposicao() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Informe a quantidade estocada do acessório '" + getDescricao() + "': ");
+        int quantidadeEstocada = scanner.nextInt();
+        setQuantidade(getQuantidade() + quantidadeEstocada);
+    }
 }
